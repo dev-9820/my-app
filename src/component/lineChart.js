@@ -22,17 +22,19 @@ function LineChart() {
         labels: ['2021-Q1', '2021-Q2', '2021-Q3', '2021-Q4', '2022-Q1', '2022-Q2', '2022-Q3', '2022-Q4', '2023-Q1', '2023-Q2', '2023-Q3', '2023-Q4', '2024-Q1', '2024-Q2'],
         datasets: [
             {
-                label: 'Total Price',
+                label: 'Total Sales',
                 data: data.map(item => item.total_price),
                 borderColor: 'rgba(75,192,192,1)',  
                 backgroundColor: 'rgba(75,192,192,0.2)',
-                fill: true, 
+                pointHoverBorderColor:'rgba(67, 168, 94)',
+                pointHoverRadius:'8',
+                borderWidth:'2',
             },
         ],
     };
 
     const options = {
-        responsive: true,
+        responsive:true,
         plugins: {
             legend: {
                 position: 'top',
@@ -60,7 +62,7 @@ function LineChart() {
 
     return (
         <div>
-            <Line style={{height:400}} data={chartData} options={options} />
+            <Line  data={chartData} options={options} />
         </div>
     );
 }
