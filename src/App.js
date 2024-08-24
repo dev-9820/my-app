@@ -2,6 +2,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import LineChart from './component/lineChart';
 import WorldMap from 'react-svg-worldmap';
+import SecondlineChart from './component/secondLinechart';
 
 function App() {
 
@@ -15,16 +16,16 @@ function App() {
         }, []);
 
         const mapData  = [
-          { country: "cn", value: 1389618778 }, // china
-          { country: "in", value: 1311559204 }, // india
-          { country: "us", value: 331883986 }, // united states
-          { country: "id", value: 264935824 }, // indonesia
-          { country: "pk", value: 210797836 }, // pakistan
-          { country: "br", value: 210301591 }, // brazil
-          { country: "ng", value: 208679114 }, // nigeria
-          { country: "bd", value: 161062905 }, // bangladesh
-          { country: "ru", value: 141944641 }, // russia
-          { country: "mx", value: 127318112 }, // mexico
+          { country: "cn", value: "- 101" }, // china
+          { country: "in", value: "- 76" }, // india
+          { country: "us", value: "- 10" }, // united states
+          { country: "id", value: "- 97" }, // indonesia
+          { country: "pk", value: "- 167" }, // pakistan
+          { country: "br", value: "- 65" }, // brazil
+          { country: "ng", value: "- 25" }, // nigeria
+          { country: "bd", value: "- 201" }, // bangladesh
+          { country: "ru", value: "- 324" }, // russia
+          { country: "mx", value: "- 156" }, // mexico
         ];
       
         
@@ -35,7 +36,7 @@ function App() {
         <h1 className='div-header'>Data Visualisation</h1>
         <div className='container'>
           <div className='chart'><LineChart/></div>
-          <div className='chart'><LineChart/></div>
+          <div className='chart'><SecondlineChart/></div>
         </div>
         <h3 style={{marginTop:'100px'}} className='div-header'>Geographical Sales Over World</h3>
         <div>

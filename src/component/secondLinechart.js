@@ -5,7 +5,7 @@ import { Chart as ChartJS, CategoryScale, LinearScale, PointElement, LineElement
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 
-function LineChart() {
+function SecondlineChart() {
     const [data, setData] = useState([]);
     
     useEffect(() => {
@@ -19,9 +19,11 @@ function LineChart() {
 
     
 
+    
+
 
     const chartData = {
-        labels: ['2021-Q1', '2021-Q2', '2021-Q3', '2021-Q4', '2022-Q1', '2022-Q2', '2022-Q3', '2022-Q4', '2023-Q1', '2023-Q2', '2023-Q3', '2023-Q4', '2024-Q1', '2024-Q2'],
+        labels: ['2021', '2022', '2023', '2024'],
         datasets: [
             {
                 label: 'Total Sales',
@@ -43,7 +45,7 @@ function LineChart() {
             },
             title: {
                 display: true,
-                text: 'Quaterly Sales Growth',
+                text: 'Yearly Sales Growth',
             },
         },
         scales: {
@@ -69,4 +71,4 @@ function LineChart() {
     );
 }
 
-export default LineChart;
+export default SecondlineChart;
