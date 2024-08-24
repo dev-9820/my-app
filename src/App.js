@@ -7,7 +7,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-      fetch('http://127.0.0.1:5000/orders')
+      fetch('https://backend-api-wkr8.onrender.com/orders')
           .then(response => response.json())
           .then(data => setData(data));
         }, []);
