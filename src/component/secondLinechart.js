@@ -9,7 +9,7 @@ function SecondlineChart() {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch('https://backend-api-wkr8.onrender.com/orders')
+        fetch('https://backend-api-wkr8.onrender.com/')
             .then(response => response.json())
             .then(data => {
                 setData(data);

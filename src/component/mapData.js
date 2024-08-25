@@ -7,7 +7,7 @@ function MapData() {
     const [mapdata, setMapdata] = useState([]);
     
     useEffect(() => {
-        fetch('https://backend-api-2-buio.onrender.com/customers')
+        fetch('https://backend-api-2-buio.onrender.com/')
             .then(response => response.json())
             .then(data => {
                 setMapdata(mapdata);
