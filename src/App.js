@@ -10,7 +10,7 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-      fetch('https://backend-api-wkr8.onrender.com/')
+      fetch('https://backend-api-wkr8.onrender.com/orders')
           .then(response => response.json())
           .then(data => setData(data));
         }, []);
