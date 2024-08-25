@@ -9,7 +9,7 @@ function LineChart() {
     const [data, setData] = useState([]);
     
     useEffect(() => {
-        fetch('https://backend-api-wkr8.onrender.com/orders')
+        fetch('https://backend-api-5j20.onrender.com/orders')
             .then(response => response.json())
             .then(data => {
                 setData(data);
